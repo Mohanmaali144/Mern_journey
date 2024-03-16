@@ -1,0 +1,14 @@
+<script>
+  function f1() {
+    // document.write("1"); // Print recursivly
+    console.log("1"); //infinite error
+    f2();
+  }
+
+  function f2() {
+    f1();
+    // document.write("2");
+    // console.log("2");
+  }
+  f1();
+</script>

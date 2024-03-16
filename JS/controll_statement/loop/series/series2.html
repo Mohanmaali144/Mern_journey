@@ -1,0 +1,16 @@
+<script>
+  // WAP to calculate the sum of given series x^1 + x^2 + x ^3.........x^n
+
+  var n = prompt("Enter range ") * 1;
+  var sum = 0;
+  for (var i = 1; i <= n; i++) {
+    var pow = 1;
+    for (var j = 1; j <= i; j++) {
+      pow *= n;
+    }
+    if (i > 1) document.write("+ ");
+    document.write(n + "^" + i);
+    sum += pow;
+  }
+  document.write(" = " + sum);
+</script>

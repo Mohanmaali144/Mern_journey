@@ -1,0 +1,18 @@
+<script>
+  // var arr = [1, 2, 5, 4, 7, 9, 2, 4];
+  var arr = [4, 5, 23, 5, 33];
+  var s = 38;
+  outerLoop: for (var i = 0; i < arr.length; i++) {
+    var sum = arr[i];
+    for (var j = i + 1; j < arr.length; j++) {
+      sum += arr[j];
+      if (sum == s) {
+        document.write(" " + (i + 1) + "-" + (j + 1));
+        break outerLoop;
+      }
+    }
+  }
+  if (i == arr.length) {
+    document.write("continuous sub-array not found ");
+  }
+</script>

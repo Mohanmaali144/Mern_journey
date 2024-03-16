@@ -1,0 +1,16 @@
+<script>
+  //WAP to calculate the sum of series 1/1! + 2/2! + 3/3!.......n\n!
+
+  var n = prompt("Enter range ") * 1;
+  var sum = 0;
+  for (var i = 1; i <= n; i++) {
+    var fact = 1;
+    for (var j = 1; j <= i; j++) {
+      fact *= j;
+    }
+    if (i > 1) document.write("+ ");
+    document.write(i + "/" + i + "!");
+    sum += i / fact;
+  }
+  document.write(" = " + sum);
+</script>

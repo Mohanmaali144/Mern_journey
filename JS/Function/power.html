@@ -1,0 +1,13 @@
+<script>
+    function myfun(callback) {
+        callback(4, 3);
+    }
+
+    myfun((n, n2) => {
+        let pow = 1;
+        for (let i = 1; i <= n2; i++) {
+            pow = pow * n;
+        }
+        document.write(n + "^" + n2 + " = " + pow);
+    });
+</script>

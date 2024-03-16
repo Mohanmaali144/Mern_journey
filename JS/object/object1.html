@@ -1,0 +1,15 @@
+<script>
+  var obj1 = { id: 100, name: "poonam" };
+  var obj2 = { id: 100, name: "poonam",  };
+  var obj3 = { id: 100, name: "poonam", age: 78};
+
+  document.write(obj1 == obj2);
+  //   document.write("<br>", JSON.stringify(obj1) === JSON.stringify(obj2));
+  document.write("<br>", JSON.stringify(obj1) == JSON.stringify(obj2));
+  document.write("<br>");
+  document.write(JSON.stringify(obj2));
+// document.write(JSON.constructor.name);
+ var myobj=  Object.getOwnPropertyDescriptor(obj1,'id')
+ myobj.Object.def
+   document.write(myobj.configurable)
+</script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .img {
+        filter: grayscale(100%);
+      }
+      .img2 {
+       position: absolute;
+       top: 50px;
+       left: 50px;
+       filter: grayscale(100%);
+      }
+    </style>
+  </head>
+  <body>
+    <img class="img" src="./lamp.jpeg" alt="" width="200px" height="200px" />
+    <img class="img2" src="./light.png" alt="">
+    <button id="btn">ON</button>
+    <script>
+      let btn = document.getElementById("btn");
+      btn.innerText = "on";
+
+      btn.addEventListener("click", () => {
+        if (btn.innerText == "on") {
+          btn.innerText = "of";
+        } else {
+          btn.innerText = "on";
+        }
+      });
+    </script>
+  </body>
+</html>

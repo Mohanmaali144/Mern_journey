@@ -1,0 +1,15 @@
+<script>
+  var n = prompt("Enter a number (three digits only)") * 1;
+  var sum = 0;
+  var temp = n;
+  sum = sum * 10 + (n % 10);
+  n = parseInt(n / 10);
+
+  sum = sum * 10 + (n % 10);
+  n = parseInt(n / 10);
+
+  sum = sum * 10 + (n % 10);
+
+  if (sum === temp) document.write(temp + " is a palindrome");
+  else document.write(temp + " is not a palindrome");
+</script>

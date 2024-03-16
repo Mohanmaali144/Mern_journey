@@ -1,0 +1,17 @@
+<script>
+
+    function myFun(callback) {
+        callback(9);
+    }
+
+    myFun(function (age) {
+
+        if (age < 0)
+            document.write("INVALID AGE PLEAS TRY AGAIN");
+        else if (age > 18)
+            document.write("YOU ARE ELIGIBLE FOR VOTING");
+        else
+            document.write("YOU ARE NOT ELIGIBLE FOR VOTING");
+
+    });
+</script>

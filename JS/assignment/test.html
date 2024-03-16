@@ -1,0 +1,24 @@
+<script>
+  const count_duplicate_characters = function (str) {
+    var arr = {};
+
+    for (let i = 0; i < str.length; i++) {
+      if (Object.keys(arr).includes(str[i])) {
+        arr[str[i]] = arr[str[i]] + 1;
+        continue;
+      }
+
+      arr[str[i]] = 1;
+    }
+    return arr;
+  };
+
+  var arr = count_duplicate_characters("Nitin");
+
+//   document.write(Object.entries(arr));
+
+  for (let key in arr) {
+    document.write(key + ":" + arr[key]);
+    document.write("<br>");
+  }
+</script>

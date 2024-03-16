@@ -1,0 +1,23 @@
+<script>
+  function myFun(callback) {
+    var char = prompt("Enter a charecter : ");
+    callback(char);
+  }
+  myFun((char) => {
+    if (!isNaN(char)) document.write(char + " is not a charecter");
+    else if (
+      char === "A" ||
+      char === "E" ||
+      char === "I" ||
+      char === "O" ||
+      char === "U" ||
+      char === "a" ||
+      char === "e" ||
+      char === "i" ||
+      char === "o" ||
+      char === "u"
+    )
+      document.write(char + " is Vowel");
+    else document.write(char + " is not Vowel");
+  });
+</script>

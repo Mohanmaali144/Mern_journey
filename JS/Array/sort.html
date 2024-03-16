@@ -1,0 +1,27 @@
+<script>
+  var arr = [0, 3, 2, 5, 4, 7, 4, 7, 5, 1];
+
+  document.write(arr);
+
+  for (var i = 0; i < arr.length; i++) {
+    for (var j = i + 1; j < arr.length; j++) {
+      if (arr[i] > arr[j]) {
+        var temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+      }
+    }
+  }
+  document.write("<br>Ascending sort array :  " + arr);
+
+  for (var i = 0; i < arr.length; i++) {
+    for (var j = i + 1; j < arr.length; j++) {
+      if (arr[i] < arr[j]) {
+        var temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+      }
+    }
+  }
+  document.write("<br>descending sort array :  " + arr);
+</script>

@@ -1,0 +1,17 @@
+<script>
+  function pattern(callback) {
+    var n = prompt("Enter a number : ") * 1;
+    callback(n);
+  }
+  pattern((n) => {
+    var temp = 1;
+    for (let i = 1; i <= n + 1; i++) {
+      for (let j = 1; j <= temp; j++) {
+        document.write("* ");
+      }
+      if (i <= n / 2) temp += 2;
+      else temp -= 2;
+      document.write("<br>");
+    }
+  });
+</script>

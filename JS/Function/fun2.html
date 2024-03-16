@@ -1,0 +1,16 @@
+<script>
+  //   function f1(a, b, c) {
+  //     document.write(a + b + c);
+  //   }
+
+  //   f1(10,20);
+
+  function f1(a, b, c, ...d) {
+    var sum = a + b + c;
+    for (var ele of d) {
+      sum += ele;
+    }
+    return sum;
+  }
+  document.write(f1(10, 20, 30, 40, 50, 60));
+</script>

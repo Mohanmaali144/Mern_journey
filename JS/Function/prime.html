@@ -1,0 +1,21 @@
+<script>
+
+    function myFun(callback) {
+        let n1 = parseInt(window.prompt());
+        let n2 = parseInt(window.prompt());
+
+        callback(n1, n2);
+    }
+
+    myFun((n1, n2) => {
+
+        if (n1 < 0 || n2 < 0)
+            document.write("NUMBER INVALID");
+        else if (n1 == n2)
+            document.write("both are Equals");
+        else if (n1 > n2)
+            document.write(n1 + " is greater number ");
+        else
+            document.write(n2 + " is greater number");
+    });
+</script>

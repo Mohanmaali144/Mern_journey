@@ -1,0 +1,16 @@
+<script>
+  var start = prompt("Enter starting number") * 1;
+  var end = prompt("Enter end number") * 1;
+
+  for (start; start <= end; start++) {
+    var sum = 0;
+    for (var i = 1; i < start; i++) {
+      if (start % i == 0) {
+        sum += i;
+      }
+    }
+    if (sum == start) {
+      document.write(start + ", ");
+    }
+  }
+</script>

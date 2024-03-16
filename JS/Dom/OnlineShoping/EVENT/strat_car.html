@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img src="./IMG/nano.jpg" height="200px" width="250px" />
+    <audio id="sound" src="./IMG/car-start-drive-away-74988.mp3"></audio>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+      var sound = document.getElementById("sound");
+      function play() {
+        sound.play();
+
+      }
+      function off() {
+        sound.pause();
+      }
+      let start = document.getElementById("start");
+      let stop = document.getElementById("stop");
+      start.addEventListener("click", () => {
+        play();
+      });
+
+      stop.addEventListener("click", () => {
+        off();
+        sound.currentTime = 0;
+      });
+    </script>
+  </body>
+</html>

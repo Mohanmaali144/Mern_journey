@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign-Up Form</title>
+    <link rel="stylesheet" href="task1.css" />
+  </head>
+  <body>
+    <div id="container">
+      <form action="" class="from-box" onsubmit="return validation(event)">
+        <span class="title">Sign up</span>
+        <span class="subtitle">Create a account</span>
+        <div class="form-container">
+          <input
+            id="fullname"
+            type="text"
+            class="input"
+            placeholder="Full Name"
+          />
+          <span class="error-msg" id="fullname-error"></span>
+          <select name="designation" id="designation" class="input">
+            <option selected value="Ui-Ux Desginer">Ui-Ux Desginer</option>
+            <option value="Full Stack Devloper">Full Stack Devloper</option>
+            <option value="Backend Devloper">Backend Devloper</option>
+            <option value="Frontend Devloper">Frontend Devloper</option>
+          </select>
+          <span class="error-msg" id="designation-error"></span>
+          <input
+            id="dob"
+            type="date"
+            class="input"
+            placeholder="Date Of Birth"
+            name="dob"
+          />
+          <span class="error-msg" id="dob-error"></span>
+          <input id="email" type="email" class="input" placeholder="Email" />
+          <span class="error-msg" id="email-error"></span>
+          <input
+            id="password"
+            type="password"
+            class="input"
+            placeholder="Password"
+          />
+          <span class="error-msg" id="password-error"></span>
+          <input
+            id="cpassword"
+            type="password"
+            class="input"
+            placeholder="conform-password"
+          />
+          <span class="error-msg" id="cpassword-error"></span>
+          <input
+            id="resume"
+            type="file"
+            class="input"
+            placeholder="Select Resume"
+            accept=".pdf"
+          />
+          <span class="error-msg" id="resume-error"></span>
+          <div id="gender-div">
+            Gender -
+            <span id="gender"
+              >Male :<input checked name="gender" type="radio" value="male" /></span
+            ><span
+              >Female:<input name="gender" type="radio" value="female"
+            /></span>
+          </div>
+          <!--------------  -->
+          <!-- -------------- -->
+        </div>
+      </form>
+    </div>
+
+    <script src="task1.js"></script>
+  </body>
+</html>

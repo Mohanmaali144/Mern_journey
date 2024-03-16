@@ -1,0 +1,15 @@
+<script>
+  var side1 = prompt("Enter fist side  ") * 1;
+  var side2 = prompt("Enter second side") * 1;
+  var side3 = prompt("Enter third side ") * 1;
+    var total = side1+side2+side3;
+  if (total != 180) {
+    document.write("invalid triangle");
+  } else if (side1 == side2 && side2 == side3) {
+    document.write("Equilateral triangle");
+  } else if (side1 == side2 || side1 == side3 || side2 == side3) {
+    document.write("Isosceles triangle");
+  } else {
+    document.write("Scalene triangle");
+  }
+</script>

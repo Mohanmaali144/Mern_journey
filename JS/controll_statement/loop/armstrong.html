@@ -1,0 +1,27 @@
+<script>
+  var n = prompt("Enter a number ");
+  var sum = 0;
+  var temp = n;
+  var count = 0;
+  while (temp > 0) {
+    count++;
+    temp = parseInt(temp / 10);
+  }
+  temp = n;
+
+  while (temp > 0) {
+    var pow = 1;
+    var lastDegit = temp % 10;
+
+    for (var i = 1; i <= count; i++) {
+      pow *= lastDegit;
+    }
+    temp = parseInt(temp / 10);
+    sum += pow;
+  }
+  if (sum == n) {
+    document.write(n + "    : is Armstrong Number ");
+  } else {
+    document.write(n + "    : is Not Armstrong Number ");
+  }
+</script>

@@ -1,0 +1,32 @@
+<script>
+  function f1(operation, callback, a, b) {
+    if (operation === "add") {
+      result = a + b;
+      callback(null, result);
+    } else if (operation === "sub") {
+      result = a - b;
+      callback(null, result);
+    } else if (operation === "multi") {
+      result = a * b;
+      callback(null, result);
+    } else if (operation === "divide") {
+      result = a / b;
+      callback(null, result);
+    } else {
+      callback(new Error("!.. Wrong Argument"));
+    }
+  }
+
+  f1(
+    "add",
+    (err, result) => {
+      if (err) {
+        document.write(err);
+      } else {
+        document.write("result = ", result);
+      }
+    },
+    10,
+    20
+  );
+</script>

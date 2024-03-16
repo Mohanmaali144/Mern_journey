@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Animation</title>
+    <style>
+      #animate {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="animate">
+      <img src="./nano.jpg" height="100" width="100" alt="" />
+    </div>
+
+    <script>
+      const element = document.getElementById("animate");
+
+      let leftposition = 0;
+      let topposition = 400;
+      element.style.top = topposition + "px";
+
+      function animate() {
+        leftposition += 1;
+
+        element.style.left = leftposition + "px";
+        if (leftposition < 1150) {
+          requestAnimationFrame(animate);
+        }
+        if(leftposition>=1150){
+            element.ro
+        }
+      }
+
+      // Start the animation
+      animate();
+    </script>
+  </body>
+</html>

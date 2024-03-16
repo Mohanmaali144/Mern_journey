@@ -1,0 +1,166 @@
+<script>
+  // D-Mart project
+  //   Array of object(product)
+  var product = [
+    {name: "item1", price: 10.0,qwantity: 0,discount: 0,total: 0,},
+    {name: "item2",
+      price: 20.0,
+      qwantity: 0,
+      discount: 0,
+      total: 0,
+    },
+    {
+      name: "item3",
+      price: 30.0,
+      qwantity: 0,
+      discount: 0,
+      total: 0,
+    },
+    {
+      name: "item4",
+      price: 40.0,
+      qwantity: 0,
+      discount: 0,
+      total: 0,
+    },
+    {
+      name: "item5",
+      price: 50.0,
+      qwantity: 0,
+      discount: 0,
+      total: 0,
+    },
+    {
+      name: "item6",
+      price: 60.0,
+      qwantity: 0,
+      discount: 0,
+      total: 0,
+    },
+    {
+      name: "item7",
+      price: 70.0,
+      qwantity: 0,
+      discount: 0,
+      total: 0,
+    },
+    {
+      name: "item8",
+      price: 80.0,
+      qwantity: 0,
+      discount: 0,
+      total: 0,
+    },
+    {
+      name: "item9",
+      price: 90.0,
+      qwantity: 0,
+      discount: 0,
+      total: 0,
+    },
+    {
+      name: "item10",
+      price: 100.0,
+      qwantity: 0,
+      discount: 0,
+      total: 0,
+    },
+  ];
+
+  var customerName = prompt("Enter customer name");
+  var gender = prompt("Enter gender");
+  switch (gender) {
+    case "male":
+      gender = "male";
+      break;
+    case "female":
+      gender = "female";
+    default:
+      gender = "other";
+      break;
+  }
+  var totalAmount = 0;
+  //  add qwantity of product by user
+  for (var item of product) {
+    item.qwantity = prompt(`Enter itme ${item.name} Qwantity`) * 1;
+    let disc = 0;
+    // dicount of  product
+    if (item.name === "item1" && item.qwantity > 4) {
+      disc = (item.qwantity * item.price * 5) / 100;
+    } else if (item.name === "item5" && item.qwantity > 0) {
+      disc = (item.qwantity * item.price * 10) / 100;
+    } else if (item.name === "item10" && item.qwantity > 0) {
+      disc = (item.qwantity * item.price * 15) / 100;
+    }
+    // Calculation
+    item.total = item.qwantity * item.price - disc;
+    item.discount = disc;
+    totalAmount += item.total;
+  }
+
+  let totaldisc = 0;
+  if (totalAmount > 10000) {
+    totaldisc = (totalAmount * 15) / 100;
+  } else if (totalAmount > 5000) {
+    totaldisc = (totalAmount * 10) / 100;
+  }
+  totalAmount = totalAmount - totaldisc;
+  let gst = (totalAmount * 10) / 100;
+  totalAmount += gst;
+
+  let carryBag = " ";
+  let carryBagPrice = 0;
+
+  //  Carry bag
+  do {
+    carryBag = prompt("are you want to carry bag ? ");
+  } while (carryBag !== "yes" && carryBag !== "no");
+  if (carryBag === "yes") {
+    totalAmount += 10;
+    carryBagPrice = 10;
+  }
+  //   Gift
+  let gift = "Cadeberry";
+  if (gender === "male") gift = "Ladger";
+  document.write("Total  :" + totalAmount);
+
+  // Display Formate of Bill
+  document.write("<pre>");
+  document.write(`
+                          D-Mart
+   Name : ${customerName}                        Data: ${new Date().toLocaleDateString()}
+   -----------------------------------------------------------
+   Item Name    Quantity    Price    Total   After-Discount`);
+  let actualPrice = 0;
+  let dicountPrice = totaldisc;
+  for (let item of product) {
+    actualPrice += item.total + item.discount;
+    dicountPrice += item.total;
+
+    document.write(`
+    ----------------------------------------------------------
+     ${item.name}         ${item.qwantity}         ${item.price}      ${
+      item.total + item.discount
+    } Rs       ${item.total} Rs
+     `);
+  }
+  document.write(`
+     ----------------------------------------------------------
+                                        A.P               D.P
+                                        ${actualPrice}         ${dicountPrice}
+     Gift :- ${gift}                    0.00           0.00
+     Carry Bag : ${carryBag}                    ${carryBagPrice}          ${carryBagPrice}
+     GST (10%)                         ${
+       (actualPrice * 10) / 100
+     }         ${gst}
+   ---------------------------------------------------------
+                                        ${
+                                          actualPrice + (actualPrice * 10) / 100
+                                        }      ${totalAmount} RS
+                       Thank You
+                        To Vist
+                         D-Mart
+   ----------------------------------------------------------
+`);
+  document.write("</pre>");
+</script>

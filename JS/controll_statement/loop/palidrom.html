@@ -1,0 +1,14 @@
+<script>
+  var n = prompt("Enter a number") * 1;
+  var temp = n;
+  var sum = 0;
+  while (temp != 0) {
+    sum = sum * 10 + (temp % 10);
+    temp = parseInt(temp / 10);
+  }
+  if (n == sum) {
+    document.write(n + ": is palindrom ");
+  } else {
+    document.write(n + ": is Not palindrom ");
+  }
+</script>

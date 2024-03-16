@@ -1,0 +1,18 @@
+<script>
+  var arr = [3, 6, 4, 6, 7, 4, 8, 3];
+
+  for (var i = 0; i < arr.length; i++) {
+    var count = 0;
+    for (var j = i + 1; j < arr.length; j++) {
+      if (arr[i] == arr[j] || arr[i] == "A") {
+        count++;
+        arr[j] = "A";
+        break;
+      }
+    }
+    if (count == 0) {
+      document.write("non_repeted  : " + arr[i]);
+      break;
+    }
+  }
+</script>

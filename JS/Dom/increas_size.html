@@ -1,0 +1,48 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+  
+  img{
+    border: 1px solid rgb(78, 78, 75);
+  }
+      button {
+        width: 40px;
+        height: 40px;
+        background-color: rgb(165, 208, 215);
+        border: 2px solid black;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+          <img
+            id="main"
+            src="./img/java2.png"
+            height="350"
+            width="350"
+            alt=""
+          />
+    
+      <br /><br />
+      <button onclick="changeSize(1)">+</button>
+      <button onclick="changeSize(0)">-</button>
+    </center>
+
+    <script>
+      function changeSize(size) {
+        var mainImg = document.getElementById("main");
+        if (size) {
+          mainImg.width = mainImg.width + 20;
+          mainImg.height = mainImg.height + 20;
+        } else {
+          mainImg.width = mainImg.width - 20;
+          mainImg.height = mainImg.height - 20;
+        }
+      }
+    </script>
+  </body>
+</html>

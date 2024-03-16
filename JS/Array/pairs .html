@@ -1,0 +1,15 @@
+<script>
+  //   var arr = [1, 4, 3, 6, 3, 7, 2];
+    var arr =[1,1,1,1];
+  // var arr = [1, 5, 7, 1];
+  var pair = prompt("Enter a value  :") * 1;
+  var count = 0;
+  for (var i = 0; i < arr.length; i++) {
+    for (var j = i + 1; j < arr.length; j++) {
+      if (arr[i] + arr[j] == pair) {
+        count++;
+      }
+    }
+  }
+  document.write(count);
+</script>

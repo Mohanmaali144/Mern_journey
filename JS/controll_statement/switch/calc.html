@@ -1,0 +1,26 @@
+<script>
+  var num1 = prompt("ENter first number") * 1;
+  var num2 = prompt("ENter second number") * 1;
+  var operator = prompt("Enter operator");
+  switch (operator) {
+    case "+":
+      document.write(num1 + num2);
+      break;
+    case "-":
+      document.write(num1 - num2);
+      break;
+    case "*":
+      document.write(num1 * num2);
+      break;
+    case "/":
+      if (num2 !== 0) {
+        document.write(num1 / num2);
+      } else {
+        document.write("its not allowd");
+      }
+      break;
+    default:
+      document.write("invalid operator");
+      break;
+  }
+</script>

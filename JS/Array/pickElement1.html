@@ -1,0 +1,17 @@
+<script>
+  var arr = [1, 2, 3, 1];
+ 
+ 
+  var left = 0;
+  var right = arr.length - 1;
+  while (left < right) {
+    var mid = parseInt(left + (right - left) / 2);
+    if (arr[mid] > arr[mid + 1]) {
+      right = mid;
+    } else {
+      left = mid + 1;
+    }
+  }
+  document.write(left);
+
+</script>

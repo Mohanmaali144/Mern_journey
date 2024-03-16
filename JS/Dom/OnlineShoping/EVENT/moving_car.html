@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Animation</title>
+    <style>
+      #animate {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="animate">
+      <img src="./IMG/nano.jpg" height="100" width="100" alt="" />
+    </div>
+
+    <script>
+      const element = document.getElementById("animate");
+      let i = 1;
+      let leftposition = 0;
+      let topposition = 400;
+      element.style.top = topposition + "px";
+
+      function animate4() {
+        topposition += 3;
+        element.style.top = topposition + "px";
+        if (topposition < 400) {
+          requestAnimationFrame(animate4);
+        }
+        if (topposition >= 400) {
+          turn2();
+        }
+      }
+
+      function animate3() {
+        leftposition -= 3;
+        element.style.left = leftposition + "px";
+        if (leftposition > 20) {
+          requestAnimationFrame(animate3);
+        }
+        if (leftposition <= 20) {
+          turn2();
+        }
+      }
+
+      function animate2() {
+        topposition -= 3;
+        element.style.top = topposition + "px";
+        if (topposition > 20) {
+          requestAnimationFrame(animate2);
+        }
+        if (topposition <= 20) {
+          turn();
+        }
+      }
+
+      function turn2() {
+        // element.style.transform = "rotate(270deg)";
+
+        if (leftposition <= 20) {
+          element.style.transform = "rotate(90deg)";
+          animate4();
+        }
+        else if (leftposition > 20) {
+          leftposition = 0;
+          topposition = 400;
+          animate();
+        }
+        // requestAnimationFrame(animate2);
+      }
+
+      function turn() {
+        element.style.transform = "rotate(-90deg)";
+        if (topposition <= 20) {
+          element.style.transform = "rotate(-180deg)";
+          animate3();
+        } else if (topposition > 20) {
+          animate2();
+        }
+        // requestAnimationFrame(animate2);
+      }
+
+      function animate() {
+        leftposition += 3;
+        element.style.left = leftposition + "px";
+        if (leftposition < 1150) {
+          requestAnimationFrame(animate);
+        }
+        if (leftposition >= 1150) {
+          turn();
+        }
+      }
+
+      animate();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+<script>
+  var n = prompt("Enter a number") * 1;
+  var temp = n;
+  var sum = 0;
+  while (temp != 0) {
+    sum = sum * 10 + (temp % 10);
+    temp = parseInt(temp / 10);
+  }
+  document.write("reverse number is : " + sum);
+</script>

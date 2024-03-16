@@ -1,0 +1,11 @@
+<script>
+  var buy = prompt("Enter Buy price ") * 1;
+  var sell = prompt("Enter selling price") * 1;
+  if (buy < sell) {
+    document.write("profit : " + (sell - buy));
+  } else if (buy > sell) {
+    document.write("loss : " + (buy - sell));
+  }else{
+    document.write("both are equal");
+  }
+</script>

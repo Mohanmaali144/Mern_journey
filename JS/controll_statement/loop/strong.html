@@ -1,0 +1,19 @@
+<script>
+  var n = prompt("Enter a number ")*1;
+  var sum = 0;
+  var temp = n;
+  while (temp > 0) {
+    var lastDigit = temp % 10;
+    var fact = 1;
+    for (var i = 1; i <= lastDigit; i++) {
+      fact *= i;
+    }
+    sum += fact;
+    temp = parseInt(temp / 10);
+  }
+  if (sum == n) {
+    document.write(n + " :  is Strong number");
+  } else {
+    document.write(n + " :  is not Strong number");
+  }
+</script>

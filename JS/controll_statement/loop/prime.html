@@ -1,0 +1,17 @@
+<script>
+  var n = prompt("Enter a number") * 1;
+
+  var flag = false;
+  for (var i = 2; i < n; i++) {
+    if (n % i == 0) {
+      flag = true;
+      break;
+    }
+  }
+  if (flag) {
+    document.write(n + " : is not prime number ");
+  } else {
+    document.write(n + " : is prime number ");
+  }
+  
+</script>

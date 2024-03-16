@@ -1,0 +1,15 @@
+<script>
+  var str = "AABBAC";
+
+  var arr = str.split("");
+  for (let i = 0; i < arr.length; i++) {
+    let count = 1;
+    for (var j = i; j < arr.length - 1; j++) {
+      if (arr[i] === arr[j + 1] && arr[i] != "./''''m") {
+        count++;
+        arr[j + 1] = "./''''m";
+      }
+    }
+    if (arr[i] != "./''''m") document.write("<br>" + str.charAt(i) + " : " + count);
+  }
+</script>

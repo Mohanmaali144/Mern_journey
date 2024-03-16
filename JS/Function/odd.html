@@ -1,0 +1,18 @@
+<script>
+
+    function oddNo(callback) {
+        callback(0);
+    }
+
+    oddNo((number) => {
+        if (number == 0) {
+            document.writeln("It is ZERO");
+        }
+        else if (number % 2 == 0) {
+            document.writeln("It is not a odd number");
+        } else {
+            document.write("it is odd number");
+        }
+    })
+
+</script>

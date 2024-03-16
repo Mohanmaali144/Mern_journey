@@ -1,0 +1,23 @@
+<script>
+
+    var myFun = function (callback) {
+
+        callback(121);
+    }
+
+    myFun(function reverse(n) {
+
+        let temp = n;
+        let rev = 0;
+        while (n > 0) {
+            let rem = n % 10;
+            rev = (10 * rev) + rem;
+
+            n = parseInt(n / 10);
+        }
+        if (rev == temp)
+            document.write(temp + " IS PALINDROM NUMBER");
+        else
+            document.write(temp + "  IS NOT PALINDROM NUMBER");
+    });
+</script>

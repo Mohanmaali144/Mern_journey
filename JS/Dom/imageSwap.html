@@ -1,0 +1,52 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <img
+        id="main"
+        src="./img/java-programming-2CFJA0C.jpg"
+        height="350"
+        width="350"
+        alt=""
+      />
+      <br /><br />
+      <img
+        onclick="swapImg(this)"
+        id="first"
+        src="./img/c_img.png"
+        height="200"
+        width="200"
+        alt=""
+      />
+      <img
+        onclick="swapImg(this)"
+        id="second"
+        src="./img/c_sharp.png"
+        height="200"
+        width="200"
+        alt=""
+      />
+      <img
+        onclick="swapImg(this)"
+        id="third"
+        src="./img/python.jpeg"
+        height="200"
+        width="200"
+        alt=""
+      />
+    </center>
+
+    <script>
+      function swapImg(smallImg) {
+        var mainImg = document.getElementById("main");
+        var temp = mainImg.src;
+        mainImg.src = smallImg.src;
+        smallImg.src = temp;
+      }
+    </script>
+  </body>
+</html>

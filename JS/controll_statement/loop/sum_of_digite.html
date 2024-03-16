@@ -1,0 +1,9 @@
+<script>
+  var temp= prompt("Enter a number") * 1;
+  var sum = 0;
+  while (temp != 0) {
+    sum = sum + (temp % 10);
+    temp = parseInt(temp / 10);
+  }
+  document.write("sum is  : " + sum);
+</script>

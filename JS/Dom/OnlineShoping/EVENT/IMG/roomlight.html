@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      div {
+        height: 600px;
+        width: 1280px;
+        background-color: black;
+      }
+      img {
+        height: 600px;
+        width: 1280px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btn">OF</button>
+    <div>
+      <img id="image" src="./room_img.jpg" alt="" />
+    </div>
+
+    <script>
+      let btn = document.getElementById("btn");
+      let image = document.getElementById("image");
+      btn.addEventListener("click", () => {
+        if (btn.innerText == "ON") {
+          btn.innerText = "DEEM";
+          image.style.opacity = 0.2;
+        } else if ((btn.innerText == "DEEM")) {
+          btn.innerText = "OF";
+          image.style.opacity = 0;
+        } else {
+          btn.innerText = "OF";
+          image.style.opacity = 1.0;
+        }
+      });
+    </script>
+  </body>
+</html>
